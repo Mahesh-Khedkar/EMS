@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+</head>
+<body>
+<h1 align="center" style="color:red">Employee Information</h1>
+<br>
+<a href="welcome">Home</a>
+
+<hr color="red"><br><br><br>
+<a href="addemployee"><button>Add Employee</button></a><br><br>
+<table border="2px" align="center">
+    <tr>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Salary</th>
+
+    </tr>
+    <tr th:each="product:${records}" >
+        <td th:text="${product.empId}"></td>
+        <td th:text="${product.empName}"></td>
+        <td th:text="${product.empSal}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+</head>
+<body>
+<h1 align="center" style="color:green">Add Employee</h1>
+<a href="welcome">Home</a>
+<hr color="red"><br><br>
+<form th:action="@{/save}" method="post" th:object="${emp}">
+  <label>Enter Id</label>
+  <input type="text" name="empId" th:field="*{empId}"><br><br>
+  <label>Enter Name</label>
+  <input type="text" name="empName" th:field="*{empName}"><br><br>
+  <label>Enter Salary</label>
+  <input type="text" name="empSal" th:field="*{empSal}"><br><br>
+  <input type="submit" value="SUBMIT" >
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--        <table align="center">-->
+<!--            <tr>-->
+<!--                <td><input type="text" placeholder="Enter Item" name="item" th:field="*{item}"></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><input type="text" placeholder="Enter Cost"></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><input type="text" placeholder="Enter Revenue"></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><button>Submit</button></td>-->
+<!--            </tr>-->
+<!--        </table>-->

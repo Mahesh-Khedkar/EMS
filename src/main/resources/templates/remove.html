@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove</title>
+</head>
+<body>
+<a href="welcome">Home</a>
+<hr color="red"><br><br>
+<form th:action="@{/remove}" method="post" th:object="${emp}">
+    <label>Enter Id</label>
+    <input type="text" name="empId" th:field="*{empId}"><br><br>
+
+    <input type="submit" value="SUBMIT" >
+</form>
+</body>
+</html>
